@@ -2,9 +2,15 @@
 minion1.example.com
 minion2.example.com
 minion3.example.com
+minion4.example.com
 
 
 [minions]
 minion1.example.com
 minion2.example.com
 minion3.example.com
+
+[databases]
+minion4.example.com
+
+
