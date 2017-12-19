@@ -11,7 +11,7 @@ zabbix_agent_packages:
 zabbix_agent_package_state: present
 zabbix_agent_server: 192.168.4.100
 zabbix_agent_serveractive: 192.168.4.100
-zabbix_selinux: False
+zabbix_selinux: True
 
 zabbix_repo_yum:
   - name: zabbix
@@ -65,7 +65,7 @@ zabbix_agent_listenport: 10050
 zabbix_agent_listeninterface:
 zabbix_agent_listenip:
 zabbix_agent_startagents: 3
-zabbix_agent_hostname: "{{ inventory_hostname }}"
+zabbix_agent_hostname: "{{ ansible_fqdn }}"
 zabbix_agent_hostnameitem:
 zabbix_agent_hostmetadata:
 zabbix_agent_hostmetadataitem:

@@ -62,3 +62,14 @@
     - zabbix-agent
     - init
     - service
+
+- name: "Open zabbix-agent port"
+  command: firewall-cmd --permanent --add-port=10050/tcp
+  tags:
+    - zabbix-agent
+
+- name: "Reload firewalld"
+  command: firewall-cmd --reload
+  tags:
+    - zabbix-agent
+
