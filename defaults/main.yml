@@ -9,8 +9,8 @@ zabbix_agent_packages:
   - zabbix-get
 
 zabbix_agent_package_state: present
-zabbix_agent_server:
-zabbix_agent_serveractive:
+zabbix_agent_server: 192.168.4.100
+zabbix_agent_serveractive: 192.168.4.100
 zabbix_selinux: False
 
 zabbix_repo_yum:
@@ -28,11 +28,11 @@ zabbix_repo_yum:
     state: present
 
 # Zabbix API stuff
-zabbix_url: "http://zabbix.dj-wasabi.local"
+zabbix_url: "http://zabbix.example.com/zabbix"
 zabbix_api_user: Admin
 zabbix_api_pass: zabbix
-zabbix_api_create_hostgroup: False
-zabbix_api_create_hosts: False
+zabbix_api_create_hostgroup: True
+zabbix_api_create_hosts: True
 zabbix_create_hostgroup: present  # or absent
 zabbix_create_host: present       # or absent
 zabbix_host_status: enabled       # or disabled
@@ -83,8 +83,8 @@ zabbix_agent_loadmodulepath: ${libdir}/modules
 zabbix_agent_loadmodule:
 
 # TLS settings
-zabbix_agent_tlsconnect:
-zabbix_agent_tlsaccept:
+zabbix_agent_tlsconnect: unencrypted
+zabbix_agent_tlsaccept: unencrypted
 zabbix_agent_tlscafile:
 zabbix_agent_tlscrlfile:
 zabbix_agent_tlsservercertissuer:

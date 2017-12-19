@@ -1,0 +1,10 @@
+[all]
+minion1.example.com
+minion2.example.com
+minion3.example.com
+
+
+[minions]
+minion1.example.com
+minion2.example.com
+minion3.example.com
