@@ -1,11 +1,14 @@
 ---
 
-- name: "Installing sample file"
+- name: "Templating userparameter_mysql conf"
   copy:
-    src: sample.conf
-    dest: "{{ agent_include }}/mysql.conf"
-    owner: zabbix
-    group: zabbix
-    mode: 0755
+    src: userparameter_mysql.conf
+    dest: /etc/zabbix/zabbix_agentd.d/userparameter_mysql.conf
+    backup: yes
+    owner: root
+    group: root
+    mode: 0644
   notify: restart zabbix-agent
-  become: yes
+  tags:
+    - zabbix-agent
+
