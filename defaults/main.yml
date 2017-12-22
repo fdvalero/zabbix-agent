@@ -9,8 +9,8 @@ zabbix_agent_packages:
   - zabbix-get
 
 zabbix_agent_package_state: present
-zabbix_agent_server: 192.168.4.100
-zabbix_agent_serveractive: 192.168.4.100
+zabbix_agent_server: 10.1.1.40
+zabbix_agent_serveractive: 10.1.1.40
 zabbix_selinux: True
 
 zabbix_repo_yum:
@@ -28,7 +28,7 @@ zabbix_repo_yum:
     state: present
 
 # Zabbix API stuff
-zabbix_url: "http://zabbix.example.com/zabbix"
+zabbix_url: "http://10.1.1.40/zabbix"
 zabbix_api_user: Admin
 zabbix_api_pass: zabbix
 zabbix_api_create_hostgroup: True
