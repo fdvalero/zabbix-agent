@@ -76,7 +76,8 @@ ListenPort={{ zabbix_agent_listenport }}
 #       list of comma delimited ip addresses that the agent should listen on.
 #       first ip address is sent to zabbix server if connecting to it to retrieve list of active checks.
 #
-ListenIP={{ zabbix_agent_listenip }}
+#ListenIP={{ zabbix_agent_listenip }}
+ListenIP={{ ansible_default_ipv4.address }}
 
 ### option: startagents
 #       number of pre-forked instances of zabbix_agentd that process passive checks.

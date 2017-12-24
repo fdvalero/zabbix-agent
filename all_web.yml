@@ -1,4 +1,4 @@
-- hosts: minions
+- hosts: all
   roles:
      - role: ../zabbix-agent
        zabbix_agent_server: 10.1.1.40
